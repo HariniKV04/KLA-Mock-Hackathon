@@ -11,6 +11,8 @@ capacity=[]
 for i in data["vehicles"]:
     capacity.append(data["vehicles"][i]["capacity"])
 
+print(capacity)
+
 o=[i for i in range(len(capacity))]
 
 t=capacity[0]
@@ -59,8 +61,9 @@ def travellingsalesman(c,cost,hold,l):
         l[0]="r0"
         l.append("r0")
         paths["v%d"%(o[cv%len(capacity)])]["path%d"%(len(paths["v%d"%(o[cv%len(capacity)])])+1)]=l
-
+     
         cv+=1
+
         l=[]
         cost=hold=0
         travellingsalesman(0,cost,hold,l)

@@ -60,7 +60,6 @@ def travellingsalesman(c,cost,hold,l):
         l.append("r0")
         paths["v%d"%(o[cv%len(capacity)])]["path%d"%(len(paths["v%d"%(o[cv%len(capacity)])])+1)]=l
 
-        print()
         cv+=1
         l=[]
         cost=hold=0
